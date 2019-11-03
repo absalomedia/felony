@@ -1,35 +1,52 @@
-sudo: required
 language: node_js
-notifications:
-  email: false
+
+# https://github.com/nodejs/Release
+# Specify current LTS version here, which is used for publishing to npm
 node_js:
-  - "6.3.1"
+  - 10 # EOL: April 2021
 
-addons:
-  apt:
-    packages:
-      - xvfb
-      - g++-4.8
-      - libgnome-keyring-dev
-    sources:
-      - ubuntu-toolchain-r-test
+os:
+  - linux
 
+# https://github.com/nodejs/Release
+matrix:
+  fast_finish: true
+  include:
+    - name: "Windows build"
+      os: windows
+      cache: false # windows cache uploads are slow
+      env: YARN_GPG=no # starts gpg-agent that never exits
 
-env:
-  - CXX=g++-4.8
+    - name: "macOS build"
+      os: osx
+
+    # Next node version
+    - node_js: 11 # EOL: June 2019
+
+services:
+  - xvfb
 
 cache:
+  yarn: true
   directories:
     - node_modules
+    - $HOME/.cache/electron
+    - $HOME/.cache/electron-builder
 
 before_install:
-  - npm install -g npm@latest
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get -qq update && sudo apt-get install -q libxss-dev; fi
 
-install:
-  - export CXX="g++-4.8"
-  - export DISPLAY=':99.0'
-  - Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-  - npm install
+script:
+  - npm install -g nyc
+  - npx nyc mocha
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 
 script:
   - npm run dev
