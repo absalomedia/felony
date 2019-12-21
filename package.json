@@ -115,7 +115,7 @@
     "lowdb": "^0.12.4",
     "merge": "^1.2.0",
     "node-notifier": "^4.6.0",
-    "normalize.css": "^3.0.3",
+    "normalize.css": "^8.0.1",
     "open": "7.0.0",
     "openpgp": "^2.2.1",
     "os": "^0.1.0",
