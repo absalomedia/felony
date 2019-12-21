@@ -91,7 +91,7 @@
     "redux-devtools-log-monitor": "^1.0.11",
     "redux-logger": "^2.6.1",
     "rollup-plugin-babel": "^3.0.7",
-    "selenium-webdriver": "^2.53.1",
+    "selenium-webdriver": "^3.6.0",
     "sinon": "^7.5.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
