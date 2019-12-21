@@ -90,7 +90,7 @@
     "redux-devtools-dock-monitor": "^1.1.1",
     "redux-devtools-log-monitor": "^1.0.11",
     "redux-logger": "^2.6.1",
-    "rollup-plugin-babel": "^2.5.1",
+    "rollup-plugin-babel": "^3.0.7",
     "selenium-webdriver": "^2.53.1",
     "sinon": "^7.5.0",
     "style-loader": "^0.13.1",
