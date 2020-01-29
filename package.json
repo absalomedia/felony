@@ -116,7 +116,7 @@
     "merge": "^1.2.0",
     "node-notifier": "^6.0.0",
     "normalize.css": "^8.0.1",
-    "open": "7.0.0",
+    "open": "7.0.1",
     "openpgp": "^4.8.0",
     "os": "^0.1.0",
     "react": "^15.0.2",
