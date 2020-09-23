@@ -109,7 +109,7 @@
     "electron-log": "^4.0.6",
     "font-awesome": "^4.7.0",
     "immutable": "^4.0.0-rc.12",
-    "isomorphic-fetch": "^2.2.1",
+    "isomorphic-fetch": "^3.0.0",
     "keytar": "^5.2.0",
     "lodash": "^4.17.15",
     "lowdb": "^1.0.0",
