@@ -95,7 +95,7 @@
     "selenium-webdriver": "^4.0.0-alpha.5",
     "sinon": "^9.0.0",
     "style-loader": "^3.2.1",
-    "webpack": "^4.41.6",
+    "webpack": "^5.58.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0",
